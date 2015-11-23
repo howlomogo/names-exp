@@ -9,7 +9,9 @@ h1, h2 {
   font-family: 'Open Sans', sans-serif; }
 
 p {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  margin: 8px 0px; }
 
 ul {
   padding: 0px;
@@ -27,13 +29,14 @@ hr {
   border-top: 1px solid #f0f5f9; }
 
 input {
-  font-family: 'Open Sans', sans-serif;
-  border: solid 2px #ccc;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  border: solid 1px #ccc;
   font-size: 16px;
-  padding: 6px 10px;
+  padding: 8px 10px;
   outline: none; }
   input:focus {
-    border: solid 2px #F55641; }
+    border: solid 1px #F55641; }
 
 .box, .col-3, .col-2, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
   -webkit-box-sizing: border-box;
@@ -140,6 +143,7 @@ input {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   overflow: auto;
+  transition: background-color 0.2s ease;
   background-color: #343131;
   padding: 32px 0px;
   text-align: center; }
@@ -152,13 +156,16 @@ input {
       display: inline-block;
       padding: 0px 16px; }
 
+.navigation-container--no-bg {
+  background-color: transparent; }
+
 .page--header {
   background-color: #F55641; }
   .page--header h2 {
     margin: 0px; }
 
 .home-box1 {
-  padding: 96px 0px;
+  padding: 179px 0px;
   text-align: center;
   background-color: #398CCE; }
   .home-box1 h1 {
@@ -168,8 +175,9 @@ input {
     letter-spacing: -1.5px; }
   .home-box1 p {
     font-family: 'Lato', sans-serif;
-    font-weight: 300;
     color: #f0f5f9; }
+  .home-box1 input {
+    width: 200px; }
 
 footer {
   background-color: #343131;
@@ -183,8 +191,7 @@ footer {
   display: flex;
   width: 100%;
   min-height: 100%;
-  min-width: 960px;
-  padding-top: 83px; }
+  min-width: 960px; }
 
 .main-content {
   background-color: #585858;

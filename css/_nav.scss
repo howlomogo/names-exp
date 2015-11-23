@@ -4,6 +4,7 @@
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   overflow: auto;
+  transition: background-color 0.2s ease;
   background-color: $color4;
   padding: $gutter 0px;
   text-align: center;
@@ -22,6 +23,10 @@
       }
     }
   }
+}
+
+.navigation-container--no-bg {
+  background-color: transparent;
 }
 
 .page--header {

@@ -1,0 +1,25 @@
+connects to database chucks all info from the db into a $scope object on the main
+controller.
+
+So it can then be used by any of the child controllers i.e home profile etc.
+
+profile will only work if you are logged in.
+
+Look at add contacts project for examples of this, might do it a differnt way though.
+
+features: (Inital, I'll add to this, wanna get all the front end done first)
+// Could maybe just get it working without database to start
+
+search users on database
+
+user search filtering
+
+add user
+
+delete user
+
+amend user
+
+user info: (Inital)
+
+first name, last name, gender

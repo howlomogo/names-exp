@@ -11,7 +11,9 @@ h1, h2 {
 }
 
 p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  margin: 8px 0px;
 }
 
 ul {
@@ -34,13 +36,14 @@ hr {
 }
 
 input {
-  font-family: 'Open Sans', sans-serif;
-  border: solid 2px #ccc;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  border: solid 1px #ccc;
   font-size: 16px;
-  padding: 6px 10px;
+  padding: 8px 10px;
   outline: none;
   &:focus {
-    border: solid 2px $color5;
+    border: solid 1px $color5;
   }
 }
 
