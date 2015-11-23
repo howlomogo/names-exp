@@ -6,12 +6,17 @@ html, body {
 }
 
 h1, h2 {
-  font-family: 'Bree Serif', serif;
-  font-weight: 800;
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
 }
 
 ul {
-  padding-left: 0px;
+  padding: 0px;
+  margin: 0px;
   li {
     list-style-type: none;
     padding: 4px 0px;
@@ -20,7 +25,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: #000;
 }
 
 hr {

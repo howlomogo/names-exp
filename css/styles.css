@@ -5,18 +5,21 @@ html, body {
   height: 100%; }
 
 h1, h2 {
-  font-family: 'Bree Serif', serif;
-  font-weight: 800; }
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif; }
+
+p {
+  font-family: 'Open Sans', sans-serif; }
 
 ul {
-  padding-left: 0px; }
+  padding: 0px;
+  margin: 0px; }
   ul li {
     list-style-type: none;
     padding: 4px 0px; }
 
 a {
-  text-decoration: none;
-  color: #000; }
+  text-decoration: none; }
 
 hr {
   margin: 0px;
@@ -36,12 +39,6 @@ input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-
-.main-container {
-  width: 960px;
-  min-width: 1024px;
-  margin: 0px auto;
-  overflow: auto; }
 
 .row {
   width: 100%;
@@ -138,60 +135,60 @@ input {
   float: right; }
 
 .nav-container {
-  overflow: auto; }
-  .nav-container h1 {
-    margin: 10px 0px 0px;
-    display: inline-block; }
-
-.fb__profile-img {
-  border: 3px solid #f0f5f9; }
-
-header {
+  position: fixed;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  overflow: auto;
   background-color: #343131;
-  color: #f0f5f9;
-  padding: 16px; }
+  padding: 32px 0px;
+  text-align: center; }
+  .nav-container ul a {
+    color: #f0f5f9;
+    transition: color 0.3s ease; }
+    .nav-container ul a:hover {
+      color: #929292; }
+    .nav-container ul a li {
+      display: inline-block;
+      padding: 0px 16px; }
+
+.page--header {
+  background-color: #F55641; }
+  .page--header h2 {
+    margin: 0px; }
+
+.home-box1 {
+  padding: 96px 0px;
+  text-align: center;
+  background-color: #398CCE; }
+  .home-box1 h1 {
+    color: #f0f5f9;
+    font-weight: 800;
+    font-size: 64px;
+    letter-spacing: -1.5px; }
+  .home-box1 p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #f0f5f9; }
 
 footer {
   background-color: #343131;
   color: #f0f5f9;
   padding: 32px; }
 
-.container {
+.main-container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   min-height: 100%;
-  min-width: 960px; }
+  min-width: 960px;
+  padding-top: 83px; }
 
 .main-content {
-  padding: 32px;
   background-color: #585858;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1; }
-
-.sidebar {
-  font-family: 'Bree Serif', serif;
-  background-color: #F55641;
-  -webkit-flex-basis: 220px;
-  -ms-flex-preferred-size: 220px;
-  flex-basis: 220px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0; }
-  .sidebar ul {
-    margin-top: 0px; }
-    .sidebar ul li {
-      border-bottom: 1px solid #343131;
-      padding: 16px 0px 16px 32px;
-      transition: background-color 0.5s ease; }
-      .sidebar ul li:hover {
-        background-color: #f22b11; }
-
-.page--header {
-  background-color: #F55641; }
-  .page--header h2 {
-    margin: 0px; }

@@ -1,10 +1,3 @@
-.main-container {
-  width: $page-width;
-  min-width: 1024px;
-  margin: 0px auto;
-  overflow: auto; // Makes the height of this fit around the floated left divs
-}
-
 .row {
   width: $row-width;
   float: left;

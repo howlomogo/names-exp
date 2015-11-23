@@ -1,11 +1,33 @@
 .nav-container {
+  position: fixed;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
   overflow: auto;
-  h1 {
-    margin: 10px 0px 0px;
-    display: inline-block;
+  background-color: $color4;
+  padding: $gutter 0px;
+  text-align: center;
+
+  ul {
+    a {
+      color: $color1;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color7;
+      }
+      li {
+        display: inline-block;
+        padding:  0px $gutter-half;
+      }
+    }
   }
 }
 
-.fb__profile-img {
-  border: 3px solid $color1;
+.page--header {
+  background-color: $color5;
+
+  h2 {
+    margin: 0px;
+  }
 }

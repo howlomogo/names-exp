@@ -4,16 +4,16 @@ app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/', {
-        templateUrl: 'views/profile.html', // Home Page
+        templateUrl: 'views/home.html', // Home Page
+        controller: 'MainCtrl'
+      }).
+      when('/home', {
+        templateUrl: 'views/home.html', // Home Page
         controller: 'MainCtrl'
       }).
       when('/profile', {
         templateUrl: 'views/profile.html',
-        controller: 'MainCtrl'
-      }).
-      when('/deckbuilder', {
-        templateUrl: 'views/deckbuilder.html',
-        controller: 'DeckBuilderCtrl'
+        controller: 'ProfileCtrl'
       }).
       otherwise({
         redirectTo: '/404',
@@ -23,10 +23,9 @@ app.config(['$routeProvider',
   }]);
 
 app.controller('MainCtrl', function($scope) {
-  // Store fb user details in controller scope
-  $scope.facebookUser = {
-    firstName: "",
-    lastName: "",
-    picture: "http://api.adorable.io/avatars/60/abott@adorable.io.png"
-  };
+
+});
+
+app.controller('ProfileCtrl', function($scope) {
+
 });

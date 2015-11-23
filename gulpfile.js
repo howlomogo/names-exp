@@ -18,13 +18,13 @@ gulp.task('browser-sync', function() {
 
 // HTML - Watch
 gulp.task('html-reload', function() {
-  gulp.watch('./*.html').on('change', browserSync.reload);
+  gulp.watch('./**/*.html').on('change', browserSync.reload);
 });
 
 // SASS
 gulp.task('sass', function() {
   console.log("Converting SASS to CSS")
-  gulp.src('css/*.scss')
+  gulp.src('css/**/*.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(gulp.dest('./css'))
   .pipe(browserSync.stream());
@@ -33,5 +33,5 @@ gulp.task('sass', function() {
 // SASS - Watch
 gulp.task('sass-watch', function() {
   console.log("Watching for CSS changes");
-  gulp.watch('css/*.scss', ['sass']);
+  gulp.watch('css/**/*.scss', ['sass']);
 });
