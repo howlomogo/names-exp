@@ -165,7 +165,7 @@ input {
     margin: 0px; }
 
 .home-box1 {
-  padding: 179px 0px;
+  padding: 179px 0px 64px;
   text-align: center;
   background-color: #398CCE; }
   .home-box1 h1 {
@@ -199,3 +199,26 @@ footer {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1; }
+
+.animate-repeat {
+  line-height: 40px;
+  list-style: none;
+  box-sizing: border-box; }
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s; }
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  opacity: 0;
+  max-height: 0; }
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity: 1;
+  max-height: 40px; }

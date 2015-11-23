@@ -1,12 +1,16 @@
-<div class="home-box1">
-  <h1>The Name Selector</h1>
-  <p>Hi there, Welcome to the site. Here you can add, view, delete and modify users.
-  <p>I am using angularJS to accomplish this.</p>
-  <input class="mt" type="text" placeholder="Search For Users..."/>
-</div>
+<div ng-controller="ProfileCtrl">
+  <div class="home-box1">
+    <h1>The Name Selector</h1>
+    <p>Hi there, Welcome to the site. Here you can add, view, delete and modify users.
+    <p>I am using angularJS to accomplish this.</p>
+    <input ng-model="userFilter" class="mt" type="text" placeholder="Search For Users..."/>
+  </div>
 
-<div class="row">
-  <div class="col-12">
-    <h1 class="mb">Home Page</h1>
+  <div class="row">
+    <div class="col-12">
+      <div class="something animate-repeat" ng-repeat="value in testdata | filter: userFilter">
+        <h1>{{ value.first_name }} {{ value.last_name }}</h1>
+      </div>
+    </div>
   </div>
 </div>
