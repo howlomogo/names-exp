@@ -4,7 +4,7 @@ html, body {
   background-color: #f0f5f9;
   height: 100%; }
 
-h1, h2 {
+h1, h2, h3, h4 {
   margin: 0px;
   font-family: 'Open Sans', sans-serif; }
 
@@ -153,6 +153,7 @@ input {
     .nav-container ul a:hover {
       color: #929292; }
     .nav-container ul a li {
+      margin-top: 11px;
       display: inline-block;
       padding: 0px 16px; }
 
@@ -163,6 +164,12 @@ input {
   background-color: #F55641; }
   .page--header h2 {
     margin: 0px; }
+
+.btn {
+  border: 2px solid #f0f5f9;
+  padding: 8px 16px;
+  background-color: #398CCE;
+  color: #f0f5f9; }
 
 .home-box1 {
   padding: 179px 0px 64px;
@@ -179,26 +186,17 @@ input {
   .home-box1 input {
     width: 200px; }
 
-footer {
-  background-color: #343131;
-  color: #f0f5f9;
-  padding: 32px; }
+.home-box2 .user-box {
+  width: 200px;
+  height: 200px;
+  background-color: #F55641;
+  float: left;
+  margin-left: 16px;
+  margin-bottom: 16px; }
 
-.main-container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  min-height: 100%;
-  min-width: 960px; }
-
-.main-content {
-  background-color: #585858;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1; }
+.profile-box1 {
+  padding: 83px 0px 32px;
+  background-color: #f0f5f9; }
 
 .animate-repeat {
   line-height: 40px;
@@ -222,3 +220,41 @@ footer {
 .animate-repeat.ng-enter.ng-enter-active {
   opacity: 1;
   max-height: 40px; }
+
+footer {
+  background-color: #343131;
+  color: #f0f5f9;
+  padding: 32px; }
+
+.main-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  min-width: 960px; }
+
+.main-content {
+  background-color: #585858;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.modal--container {
+  z-index: 3000;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .modal--container .modal {
+    position: fixed;
+    width: 640px;
+    background-color: #f0f5f9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 96px; }

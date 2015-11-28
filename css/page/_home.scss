@@ -20,3 +20,14 @@
     width: 200px;
   }
 }
+
+.home-box2 {
+  .user-box {
+    width: 200px;
+    height: 200px;
+    background-color: $color5;
+    float: left;
+    margin-left: $gutter-half;
+    margin-bottom: $gutter-half;
+  }
+}

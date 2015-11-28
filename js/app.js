@@ -1,6 +1,6 @@
-var app = angular.module('myApp', ['ngRoute', 'ngAnimate']);
+angular.module('app', ['ngRoute', 'ngAnimate'])
 
-app.config(['$routeProvider',
+.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/', {
@@ -21,17 +21,3 @@ app.config(['$routeProvider',
         controller: 'MainCtrl'
       });
   }]);
-
-app.controller('MainCtrl', function($scope) {
-  $scope.testdata = [
-  {first_name: "Tom", last_name: "Green", gender: "m"},
-  {first_name: "Katie", last_name: "Black", gender: "f"},
-  {first_name: "John", last_name: "Cena", gender: "m"},
-  {first_name: "Jane", last_name: "Doe", gender: "f"},
-  {first_name: "Sally", last_name: "Jones", gender: "f"}
-  ];
-});
-
-app.controller('ProfileCtrl', function($scope) {
-
-});

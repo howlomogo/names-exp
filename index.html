@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app="app">
 <head>
   <meta charset="utf-8" />
   <title>Random Title</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>  <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/styles.css" />
   <script src="node_modules/angular/angular.min.js"></script>
   <script src="node_modules/angular-route/angular-route.min.js"></script>
   <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+
   <script src="js/app.js"></script>
+  <script src="js/controllers/mainController.js"></script>
+  <script src="js/controllers/homeController.js"></script>
+  <script src="js/controllers/profileController.js"></script>
 </head>
 
 <body>
   <div id="nav-container" class="nav-container">
+    <div class="btn pull-right">Log In</div>
     <ul>
       <a href="#home"><li>Home</li></a>
       <a href="#profile"><li>Profile</li></a>
@@ -21,8 +27,15 @@
 
   <div ng-controller="MainCtrl" id="mainctrl" class="main-container">
     <div class="main-content">
+      <h1>{{ blah }}</h1>
       <div ng-view></div>
     </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal--container">
+    <div class="modal">This is a modal</div>
   </div>
 
   <footer>Footer</footer>

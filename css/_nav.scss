@@ -18,6 +18,7 @@
         color: $color7;
       }
       li {
+        margin-top: 11px;
         display: inline-block;
         padding:  0px $gutter-half;
       }
@@ -35,4 +36,11 @@
   h2 {
     margin: 0px;
   }
+}
+
+.btn {
+  border: 2px solid $color1;
+  padding: 8px 16px;
+  background-color: $color10;
+  color: $color1;  
 }
