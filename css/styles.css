@@ -166,10 +166,19 @@ input {
     margin: 0px; }
 
 .btn {
+  position: absolute;
+  right: 64px;
   border: 2px solid #f0f5f9;
   padding: 8px 16px;
   background-color: #398CCE;
-  color: #f0f5f9; }
+  transition: background-color 0.2s ease;
+  color: #f0f5f9;
+  cursor: pointer; }
+  .btn:hover {
+    background-color: #F55641; }
+
+.logout {
+  right: 160px; }
 
 .home-box1 {
   padding: 179px 0px 64px;

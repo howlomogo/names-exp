@@ -16,27 +16,33 @@
   <script src="js/controllers/profileController.js"></script>
 </head>
 
-<body>
+<body ng-controller="MainCtrl" id="mainctrl"> <!-- Rethink where the controller is -->
   <div id="nav-container" class="nav-container">
-    <div class="btn pull-right">Log In</div>
+    <div class="btn" ng-if="activeUser === ''" ng-click="checkName()">Log In</div>
+    <div class="btn logout" ng-if="activeUser !== ''" ng-click="logout()">Log Out</div>
+
     <ul>
       <a href="#home"><li>Home</li></a>
       <a href="#profile"><li>Profile</li></a>
     </ul>
   </div>
 
-  <div ng-controller="MainCtrl" id="mainctrl" class="main-container">
+  <div class="main-container">
     <div class="main-content">
-      <h1>{{ blah }}</h1>
       <div ng-view></div>
+      <form ng-if="activeUser === ''" ng-submit="checkName()">
+        First name: <input type="text" ng-model="login_name"><br>
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </div>
 
 
   <!-- Modal -->
+  <!-- 
   <div class="modal--container">
     <div class="modal">This is a modal</div>
-  </div>
+  </div> -->
 
   <footer>Footer</footer>
 
