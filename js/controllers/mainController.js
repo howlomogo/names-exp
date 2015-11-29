@@ -11,6 +11,9 @@ angular.module('app').controller('MainCtrl', ['$scope', function($scope) {
   // Do modals then add a log in modal
   $scope.activeUser = "";
 
+  // Change way to do modals, this is to be built on
+  $scope.modalActive = false;
+
   $scope.checkName = function() {
     if(doesUserExist(this.login_name)) {
       console.log("Logging in as " + this.login_name);
@@ -34,4 +37,14 @@ angular.module('app').controller('MainCtrl', ['$scope', function($scope) {
     console.log("Logging Out");
     $scope.activeUser = "";
   }
+
+  $scope.openModal = function(modalToOpen) {
+    var modal = document.getElementById(modalToOpen);
+    $scope.modalActive = true;
+    console.log(modal);
+  };
+
+  $scope.closeModal = function() {
+    $scope.modalActive = false;
+  };
 }]);
