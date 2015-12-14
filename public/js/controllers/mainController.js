@@ -1,4 +1,4 @@
-angular.module('app').controller('MainCtrl', ['$scope', function($scope) {
+angular.module('app').controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
   $scope.testdata = [
     {first_name: "Tom", last_name: "Green", gender: "m"},
     {first_name: "Katie", last_name: "Black", gender: "f"},
@@ -13,6 +13,14 @@ angular.module('app').controller('MainCtrl', ['$scope', function($scope) {
 
   // Change way to do modals, this is to be built on
   $scope.modalActive = false;
+
+  $scope.getUsers = function() {
+    $http.get('http://localhost:3000/monkeys').success(function(response) {
+      console.log("Called getUsers");
+      console.log(response);
+      $scope.testdata = response;
+    });
+  }
 
   $scope.checkName = function() {
     if(doesUserExist(this.login_name)) {

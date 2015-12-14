@@ -51,7 +51,15 @@
     </div>
   </div>
 
-  <footer>Footer</footer>
+  <footer>
+    <button ng-click="getUsers()" type="button">Click Me!</button>
+
+    <ul>
+      <li ng-repeat="item in testdata">
+        {{ item.first_name }}
+      </li>
+    </ul>
+  </footer>
 
   <script src="js/nav-hide.js"></script>
 </body>
