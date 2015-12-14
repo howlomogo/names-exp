@@ -11,27 +11,27 @@ gulp.task('browser-sync', function() {
   console.log("Browser sync started");
   browserSync.init({
     server: {
-      baseDir: "./"
+      baseDir: "./public"
     }
   });
 });
 
 // HTML - Watch
 gulp.task('html-reload', function() {
-  gulp.watch('./**/*.html').on('change', browserSync.reload);
+  gulp.watch('public/**/*.html').on('change', browserSync.reload);
 });
 
 // SASS
 gulp.task('sass', function() {
   console.log("Converting SASS to CSS")
-  gulp.src('css/**/*.scss')
+  gulp.src('public/css/**/*.scss')
   .pipe(sass().on('error', sass.logError))
-  .pipe(gulp.dest('./css'))
+  .pipe(gulp.dest('public/css/'))
   .pipe(browserSync.stream());
 });
 
 // SASS - Watch
 gulp.task('sass-watch', function() {
   console.log("Watching for CSS changes");
-  gulp.watch('css/**/*.scss', ['sass']);
+  gulp.watch('public/css/**/*.scss', ['sass']);
 });
