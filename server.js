@@ -9,6 +9,8 @@ var bodyParser = require('body-parser');
 app.use(cors());
 app.use(bodyParser.json());
 
+// Add in insert, update etc to this
+// Do front end stuff
 app.get('/monkeys', function (req, res) {
   console.log("I recieved a get request.");
   db.users.find(function (err, docs) {
